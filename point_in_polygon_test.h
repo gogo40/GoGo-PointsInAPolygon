@@ -20,8 +20,10 @@ These functions implements two test to verify if a point is inside a polygon
 
 #include <vector>
 
-namespace WindingTest {
+namespace PointInPolygonTest {
 
+
+void setTolerance(double eps);
 
 // a Point is defined by its coordinates {double x, y;}
 //===================================================================

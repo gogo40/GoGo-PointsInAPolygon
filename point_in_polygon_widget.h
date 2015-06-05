@@ -12,6 +12,14 @@ A small widget to test if a point is inside a polygon
 
 #include <QWidget>
 
+#include <map>
+
+#include <QGeoCoordinate>
+#include <QGeoSatelliteInfoSource>
+#include <QGeoPositionInfoSource>
+
+#include "point_in_polygon_test.h"
+
 namespace Ui {
 class PointInPolygon;
 }
@@ -30,8 +38,28 @@ private slots:
 
     void on_verifyPointButton_clicked();
 
+    void on_loadFromCSVFileButton_clicked();
+
+    void on_testPointsFromCSVButton_clicked();
+
+    void positionUpdated(const QGeoPositionInfo &info);
+    void resetGPS();
+
 private:
+
+    void add_new_point(const QString& mine, const QString& point, double x, double y);
+    void update_points_map();
+    void verify_point(const PointInPolygonTest::Point& p);
+
     Ui::PointInPolygon *ui;
+    typedef std::tuple<QString, QString> IdMine;
+    std::map<IdMine, PointInPolygonTest::Points> pts_map_;
+
+    QGeoPositionInfoSource* position_info_;
+    QGeoSatelliteInfoSource* satellite_info_;
+    QGeoPositionInfo last_position_;
+    double dist_acc_;
+    bool is_first_distance_;
 };
 
 #endif // POINTINPOLYGON_H
