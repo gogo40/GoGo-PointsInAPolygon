@@ -4,6 +4,9 @@ Winding Test
 Péricles Lopes Machado, 2015
 
 - Small changes to support doubles.
+
+
+Based on implementation present in http://geomalgorithms.com/a03-_inclusion.html
 */
 
 // Copyright 2000 softSurfer, 2012 Dan Sunday

@@ -6,6 +6,8 @@ Péricles Lopes Machado, 2015
 - Small changes to support doubles.
 
 These functions implements two test to verify if a point is inside a polygon
+
+Based on implementation present in http://geomalgorithms.com/a03-_inclusion.html
 */
 
 // Copyright 2000 softSurfer, 2012 Dan Sunday
