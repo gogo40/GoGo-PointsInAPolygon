@@ -93,6 +93,9 @@
       </item>
       <item row="0" column="5">
        <widget class="QDoubleSpinBox" name="xNewPoint">
+        <property name="decimals">
+         <number>8</number>
+        </property>
         <property name="minimum">
          <double>-9999999.000000000000000</double>
         </property>
@@ -110,6 +113,9 @@
       </item>
       <item row="1" column="5">
        <widget class="QDoubleSpinBox" name="yNewPoint">
+        <property name="decimals">
+         <number>8</number>
+        </property>
         <property name="minimum">
          <double>-9999999.000000000000000</double>
         </property>
@@ -143,23 +149,9 @@
       </item>
       <item row="0" column="1">
        <widget class="QDoubleSpinBox" name="xPoint">
-        <property name="minimum">
-         <double>-9999999.000000000000000</double>
+        <property name="decimals">
+         <number>8</number>
         </property>
-        <property name="maximum">
-         <double>9999999.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Y:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QDoubleSpinBox" name="yPoint">
         <property name="minimum">
          <double>-9999999.000000000000000</double>
         </property>
@@ -172,6 +164,26 @@
        <widget class="QPushButton" name="testPointsFromCSVButton">
         <property name="text">
          <string>Testar pontos de arquivo CSV</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Y:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="yPoint">
+        <property name="decimals">
+         <number>8</number>
+        </property>
+        <property name="minimum">
+         <double>-9999999.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>9999999.000000000000000</double>
         </property>
        </widget>
       </item>
